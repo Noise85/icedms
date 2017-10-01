@@ -8,7 +8,7 @@ package ch.iceage.icedms.core.business;
 import java.util.List;
 /**
  *
- * @author 
+ * 
  */
 public interface Commentable {
     public List<Comment> getComments();

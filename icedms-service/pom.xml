@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>ch.iceage</groupId>
-            <artifactId>icedms-persistence-orm</artifactId>
+            <artifactId>icedms-persistence-jdbc</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

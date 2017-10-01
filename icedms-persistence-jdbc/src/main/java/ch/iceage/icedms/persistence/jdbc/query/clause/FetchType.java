@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.iceage.icedms.core.business;
+package ch.iceage.icedms.persistence.jdbc.query.clause;
 
 /**
  *
  * 
  */
-public interface Note extends Identity, Loggable {
-    public String getValue();
-    public void setValue();
+public enum FetchType {
+    LAZY,EAGER;
 }

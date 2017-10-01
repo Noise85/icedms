@@ -5,6 +5,8 @@
  */
 package ch.iceage.icedms.service.config;
 
+import java.sql.SQLException;
+
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +17,9 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import ch.iceage.icedms.persistence.jdbc.metadata.DatabaseSchema;
+import ch.iceage.icedms.persistence.jdbc.metadata.impl.DefaultDatabaseSchema;
 
 /**
  *
@@ -37,6 +42,14 @@ public class DefaultJpaConfig extends AbstractJpaConfig {
         dataSource.setUrl(env.getProperty("dbURL"));
         dataSource.setUsername(env.getProperty("username"));
         return dataSource;
+    }
+    
+    @Bean
+    @Override
+    @Autowired
+    public DatabaseSchema databaseSchema(DataSource dataSource) throws SQLException {
+    	DatabaseSchema schema = new DefaultDatabaseSchema(dataSource, env.getProperty("dbSchema"));
+    	return schema;
     }
     
 }

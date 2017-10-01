@@ -55,7 +55,7 @@
     <modules>
     	<module>icedms-business-orm</module>
     	<module>icedms-core</module>
-		<module>icedms-persistence-orm</module>
+		<module>icedms-persistence-jdbc</module>
 		<module>icedms-service</module>
     	<module>icedms-web</module>
     </modules>

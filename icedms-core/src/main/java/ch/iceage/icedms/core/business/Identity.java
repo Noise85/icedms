@@ -7,7 +7,6 @@ package ch.iceage.icedms.core.business;
 
 /**
  * Used to add identity behaviour to entities.
- * @author 
  */
 public interface Identity {
 

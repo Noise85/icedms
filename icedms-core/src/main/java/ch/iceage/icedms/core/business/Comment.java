@@ -7,7 +7,7 @@ package ch.iceage.icedms.core.business;
 
 /**
  *
- * @author 
+ * 
  */
 public interface Comment extends Identity, Loggable {
     public String getCommentText();
